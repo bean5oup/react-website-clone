@@ -3,6 +3,7 @@ import Lmenu from "./list_menu";
 import data from "../data/data";
 import {useState} from "react";
 import "../../assets/list.css";
+import "../../assets/list_menu.css";
 
 const setCategory = [... new Set(data.map((e)=>e.category))]
 const category = ["전체", ... setCategory]
@@ -26,7 +27,7 @@ function List() {
     return(
         <div id="list"> 
             <div className="list">
-                <h1>{selectCategory}</h1>
+                <h1 id="title">{selectCategory}</h1>
                 <Lmenu category={category} num={numCategory} filterItem={filterItem}/>
                 <Litem items={items}/>
             </div>

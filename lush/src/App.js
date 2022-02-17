@@ -6,6 +6,7 @@ import data from './commons/data/data';
 function App() {
   return (
     <div className="App">
+      <h1>lush</h1>
       <List/>
       
     </div>
