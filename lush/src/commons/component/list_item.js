@@ -1,17 +1,32 @@
-import data from '../data/data';
+import '../../assets/list_item.css'
+import {AiOutlineShoppingCart} from 'react-icons/ai';
 
-function Litem(){
+function Litem({items}){
+    const setType = (type)=>{
+        return(
+            type.map((e)=><img id="img" src={`/img/icon_${e}.png`}/>)
+        )
+    }
+    
     return(
-        <>
+        <div id="items">
             {
-                data.map((item)=>{
-                    const {id, title, des, price, type, category, img} = item;
+                items.map((item)=>{
+                    const {id, title, des, price, type, img} = item;
                     return (
-                        <h1>{id}</h1>
+                        <div id="item" key={id}>
+                            <img src={img} alt={title}/>
+                            <div id="des">
+                                <span>{setType(type)}</span>
+                                <span className="item_title">{title}</span>
+                                <span className="item_des">{des}</span>
+                                <span className="item_price">{price}</span>
+                            </div>
+                        </div>
                     )
                 })
             }
-        </>
+        </div>
     )
 }
 

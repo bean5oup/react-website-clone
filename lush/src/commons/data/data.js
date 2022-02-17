@@ -14,7 +14,7 @@ const data=[
         des: '#샤워스크럽 #갓짜낸오렌지주스',
         price: 30000,
         type: ['new', 'vegan'],
-        category: '스크럽 & 버터&버터',
+        category: '스크럽 & 버터',
         img: 'https://lush.co.kr/data/goods/20/09/39/1000001344/1000001344_main_054.jpg'
     },
     {
